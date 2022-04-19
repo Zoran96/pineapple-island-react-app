@@ -1,0 +1,79 @@
+.main-heading {
+  font-family: $font-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 60px;
+  line-height: 79.98px;
+  color: $color-main;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 35.99px;
+  }
+
+  @include phone {
+    font-size: 24px;
+    line-height: 31.99px;
+  }
+}
+
+.main-heading--white {
+  @extend .main-heading;
+  color: $color-secondary;
+}
+
+.main-text {
+  font-family: $font-main;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 36px;
+  color: $color-secondary;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  @include phone {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.main-text--gray {
+  @extend .main-text;
+  color: $color-six;
+}
+
+.secondary-text {
+  font-family: $font-main;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-six;
+
+  @include responsive {
+    color: $color-secondary;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @include phone {
+    font-family: $font-third;
+    font-weight: $font-weight-light;
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+
+.secondary-text--dark {
+  @extend .secondary-text;
+  color: $color-fourth;
+}
+
+.secondary-text--white {
+  @extend .secondary-text;
+  color: $color-secondary;
+}

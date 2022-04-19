@@ -1,0 +1,52 @@
+.main-btn {
+  display: inline-block;
+  font-family: $font-main;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 27.32px;
+  color: $color-secondary;
+  background-color: $color-main;
+  padding: 11px 35px 12px 39px;
+
+  @include transition(opacity, 0.3s, ease);
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+.secondary-btn {
+  display: inline-block;
+  font-family: $font-third;
+  font-weight: $font-weight-light;
+  font-size: 20px;
+  line-height: 19.14px;
+  color: $color-secondary;
+  background-color: $color-main;
+  padding: 20px 75px;
+
+  @include transition(opacity, 0.3s, ease);
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include responsive {
+    font-weight: $font-weight-medium;
+    color: $color-main;
+    background-color: $color-secondary;
+    border-radius: 5px;
+  }
+
+  @include tablet {
+    font-size: 19px;
+    line-height: 23px;
+    padding: 13px 16px;
+  }
+
+  @include phone {
+    font-size: 16px;
+    line-height: 19.2px;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-main;
+	font-weight: $font-weight-regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 1760px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.sr-only {
+  border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+ 

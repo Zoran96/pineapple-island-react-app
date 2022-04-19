@@ -1,0 +1,139 @@
+.text-img-module {
+  background-color: $color-main;
+  position: relative;
+  padding-top: 89px;
+  padding-bottom: 0px;
+  margin-bottom: 100px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-secondary;
+    clip-path: polygon(67% 73%, -20% 102%, 111% 100%);
+    z-index: 1;
+    margin-top: 1px;
+  }
+
+  @include responsive {
+    background-color: $color-secondary;
+    padding-top: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include phone {
+    margin-bottom: 30px;
+  }
+}
+
+.text-img-module__container {
+  @include flex-row(space-between, center);
+  max-width: 1545px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  .main-heading {
+    max-width: 317px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+
+  @include responsive {
+    text-align: center;
+    flex-direction: column;
+
+    .main-heading--white {
+      margin: 10px;
+      color: $color-main;
+    }
+  }
+
+  @include tablet {
+    .main-heading--white {
+      max-width: 300px;
+    }
+  }
+
+  @include phone {
+    margin-top: 20px;
+
+    .main-heading--white {
+      max-width: 224px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.text-img-module__content {
+  @include flex-row(initial, initial);
+  max-width: 1186px;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  @include responsive {
+    flex-direction: column;
+  }
+
+  @include phone {
+    min-height: 431px;
+  }
+}
+
+.text-img-module__description {
+  background-color: $color-secondary;
+  max-width: 477px;
+  width: 100%;
+  box-shadow: 0px 4px 25px 5px rgba($color-fourth, 0.1);
+
+  @include responsive {
+    max-width: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin-bottom: 17px;
+  }
+}
+
+.text-img-module__text {
+  font-family: $font-main;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-main;
+  padding: 113px 100px 108px;
+
+  @include tablet {
+    padding: 30px;
+  }
+
+  @include phone {
+    font-size: 16px;
+    line-height: 25.6px;
+    padding: 0;
+  }
+}
+
+.text-img-module__img {
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    min-height: 407px;
+  }
+
+  @include phone {
+    min-height: 207px;
+  }
+}

@@ -1,0 +1,69 @@
+.error-page {
+  padding: 200px 0px;
+  
+  @include responsive {
+    @include flex-column(center, center);
+    padding: 0;
+  }
+
+  @include tablet {
+    min-height: calc(100vh - 293.9px);
+  }
+
+  @include phone {
+    min-height: calc(100vh - 245.9px);
+  }
+}
+
+.error-page__container {
+  @include flex-column(initial, center);
+
+  @include phone {
+    .main-btn {
+      font-size: 16px;
+      line-height: 19.2px;
+      padding: 10px 15px;
+    }
+  }
+}
+
+.error-page__heading {
+  font-family: $font-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 140px;
+  line-height: 160px;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 90px;
+    line-height: 110px;
+  }
+
+  @include phone {
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
+
+.error-page__sub-heading {
+  font-family: $font-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include phone {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}

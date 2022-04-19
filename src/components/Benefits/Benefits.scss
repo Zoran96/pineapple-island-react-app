@@ -1,0 +1,227 @@
+.benefits {
+  padding: 150px 0px;
+
+  @include tablet {
+    padding: 60px 0px;
+  }
+
+  @include phone {
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+}
+
+.benefits__container {
+  @include flex-column(initial, initial);
+
+  .main-heading {
+    text-align: center;
+    margin-bottom: 111px;
+  }
+
+  @include tablet {
+    .main-heading {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include phone {
+    .main-heading {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.benefits__content {
+  max-width: 1546px;
+  width: 100%;
+  margin: 0 auto;
+  @include flex-row(space-between, center);
+
+  @include responsive {
+    flex-direction: column;
+
+    &:first-of-type {
+      .benefits__img {
+        display: block;
+        margin-right: 0;
+        padding-top: 0;
+        height: 387px;
+        max-width: 100%;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.benefits__img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 37.6%;
+  max-width: 567px;
+  width: 100%;
+  position: relative;
+  margin-right: 205px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 61%;
+    background-color: $color-main;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    right: -36%;
+  }
+
+  @include responsive {
+    display: none;
+  }
+
+  @include tablet {
+    height: 500px;
+  }
+}
+
+.benefits__icons {
+  @include flex-row(space-between, initial);
+  max-width: 628px;
+  width: 100%;
+  min-height: 203px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+
+  @include responsive {
+    background-color: $color-main;
+    margin: 0;
+    min-height: unset;
+    position: relative;
+    flex-wrap: nowrap;
+    padding-bottom: 12px;
+    margin-top: -2px;
+  }
+
+  @include tablet {
+    max-width: 500px;
+    top: -70px;
+  }
+
+  @include phone {
+    max-width: 299px;
+    top: -57px;
+  }
+}
+
+.benefits__icons-container {
+  @include flex-column(space-between, center);
+  margin: 25px 0px;
+  max-width: 123px;
+  width: 100%;
+
+  @include responsive {
+    max-width: unset;
+    width: 29%;
+    margin: 31px 5px 15px;
+  }
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include phone {
+    justify-content: initial;
+  }
+}
+
+.benefits__icons-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: $color-six;
+
+  @include responsive {
+    color: $color-secondary;
+    margin-bottom: 8px;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include phone {
+    font-size: 32px;
+  }
+}
+
+.benefits__icons-description {
+  font-family: $font-third;
+  font-weight: $font-weight-regular;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-six;
+  text-align: center;
+
+  @include responsive {
+    color: $color-secondary;
+  }
+
+  @include phone {
+    font-family: $font-third;
+    font-weight: $font-weight-regular;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+///// INVERTED VERSION
+
+.benefits__content--inverted {
+  flex-direction: row-reverse;
+
+  .benefits__img {
+    margin-right: unset;
+    margin-left: 205px;
+
+    &::before {
+      left: -36%;
+      right: unset;
+    }
+  }
+
+  .benefits__icons {
+    margin-left: unset;
+    margin-right: 20px;
+    max-width: 653px;
+  }
+
+  .benefits__icons-container {
+    max-width: 180px;
+    width: auto;
+  }
+
+  @include responsive {
+    flex-direction: column;
+
+    .benefits__icons {
+      margin-right: 0;
+      max-width: 500px;
+    }
+
+    .benefits__icons-container {
+      max-width: unset;
+      width: 29%;
+    }
+  }
+
+  @include phone {
+    .benefits__icons {
+      max-width: 299px;
+    }
+  }
+}

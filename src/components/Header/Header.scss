@@ -1,0 +1,205 @@
+.header {
+  padding: 50px 0px;
+}
+
+.header__container {
+  @include flex-row(space-between, center);
+
+  .main-btn {
+    margin-top: -1px;
+  
+    @include responsive {
+      display: none;
+    }
+  }
+}
+
+.header__logo {
+  font-family: $font-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 32px;
+  line-height: 42.66px;
+  color: $color-main;
+  max-width: 148px;
+  width: 100%;
+
+  @include responsive {
+    position: relative;
+    z-index: 11;
+  }
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 30.66px;
+  }
+
+  @include phone {
+    font-size: 20px;
+    line-height: 26.66px;
+  }
+}
+
+.header__logo-link {
+  &:link {
+    color: $color-main;
+  }
+  
+  &:visited {
+    color: $color-main;
+  }
+  
+  &:hover {
+    color: $color-main;
+  }
+  
+  &:active {
+    color: $color-main;
+  }
+}
+
+.header__navbar {
+  @include responsive {
+    display: none;
+    background-color: $color-secondary;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 120px 0px;
+    z-index: 10;
+  }
+}
+
+.header__navbar--open {
+  @include flex-column(center, center);
+}
+
+.header__menu {
+  @include flex-row(center, center);
+  flex-wrap: wrap;
+  margin-left: 45px;
+  padding-top: 1px;
+
+  @include responsive {
+    flex-direction: column;
+    justify-content: initial;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin: 90px 0px;
+  }
+}
+
+.header__menu-item {
+  @include responsive{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.header__menu-link {
+  font-family: $font-main;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 27.32px;
+  color: $color-third;
+  position: relative;
+  margin: 0px 45px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 1px;
+    background-color: $color-main;
+
+    @include transition(width, 0.3s, ease);
+  }
+
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @include phone {
+    font-size: 15px;
+    line-height: 20.32px;
+  }
+}
+
+.header__toggle {
+  display: none;
+  border: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 11;
+
+  @include responsive {
+    @include flex-row(center, center);
+  }
+}
+
+.hamburger {
+  position: relative;
+  height: 2px;
+  width: 24px;
+  background-color: $color-main;
+  display: block;
+
+  @include transition(transform, 0.4s, ease);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: $color-main;
+    left: 0;
+
+    @include transition(transform, 0.4s, ease-in-out);
+  }
+
+  &::before {
+    top: 7px;
+  }
+
+  &::after {
+    bottom: 7px;
+  }
+
+  @include tablet {
+    height: 3px;
+    width: 30px;
+
+    &::before,
+    &::after {
+      width: 30px;
+      height: 3px;
+    }
+  }
+}
+
+.header__toggle.header__toggle--clicked {
+  .hamburger {
+    background-color: transparent;
+    
+    &::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  }
+}

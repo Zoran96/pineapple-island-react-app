@@ -1,0 +1,31 @@
+export const data = {
+  heading: 'Galleries',
+  headingResponsive: 'Available Homes',
+  text: 'a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.',
+  gallery: [
+    require('../../assets/images/gallery-img-1.jpg'),
+    require('../../assets/images/gallery-img-2.jpg'),
+    require('../../assets/images/gallery-img-3.jpg'),
+    require('../../assets/images/gallery-img-4.jpg'),
+    require('../../assets/images/gallery-img-5.jpg'),
+    require('../../assets/images/gallery-img-6.jpg'),
+    require('../../assets/images/gallery-img-7.jpg'),
+    require('../../assets/images/gallery-img-8.jpg'),
+    require('../../assets/images/gallery-img-9.jpg'),
+  ],
+  galleryResponsive: [
+    require('../../assets/images/gallery-responsive-img-1.jpg'),
+    require('../../assets/images/gallery-responsive-img-2.jpg'),
+    require('../../assets/images/gallery-responsive-img-3.jpg'),
+    require('../../assets/images/gallery-responsive-img-4.jpg'),
+    require('../../assets/images/gallery-responsive-img-5.jpg'),
+    require('../../assets/images/gallery-responsive-img-6.jpg'),
+    require('../../assets/images/gallery-responsive-img-7.jpg'),
+    require('../../assets/images/gallery-responsive-img-8.jpg'),
+    require('../../assets/images/gallery-responsive-img-9.jpg'),
+    require('../../assets/images/gallery-responsive-img-10.jpg'),
+    require('../../assets/images/gallery-responsive-img-11.jpg'),
+    require('../../assets/images/gallery-responsive-img-12.jpg'),
+    require('../../assets/images/gallery-responsive-img-13.jpg'),
+  ]
+}

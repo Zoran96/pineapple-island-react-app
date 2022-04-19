@@ -1,0 +1,58 @@
+///// ABSTRACTS
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+///// BASE
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/buttons';
+@import 'base/print';
+
+///// COMPONENTS
+
+//// HEADER
+
+@import '/src/components/Header/Header';
+
+//// BANNER
+
+@import '/src/components/Banner/Banner';
+
+//// TEXT SLIDER MODULE
+
+@import '/src/components/TextSliderModule/TextSliderModule';
+
+//// TEXT IMG MODULE
+
+@import '/src/components/TextImgModule/TextImgModule';
+
+//// BENEFITS
+
+@import '/src/components/Benefits/Benefits';
+
+//// GALLERY
+
+@import '/src/components/Gallery/Gallery';
+
+//// FEATURES
+
+@import '/src/components/Features/Features';
+
+//// CTA BLOCK
+
+@import '/src/components/CTABlock/CTABlock';
+
+//// FORM
+
+@import '/src/components/Form/Form';
+
+//// FOOTER
+
+@import '/src/components/Footer/Footer';
+
+//// ERROR PAGE 
+
+@import '/src/pages/ErrorPage/ErrorPage'
